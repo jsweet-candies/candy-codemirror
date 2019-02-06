@@ -53,19 +53,6 @@ public interface StringTypes {
     @jsweet.lang.StringType
     public static def.codemirror.StringTypes.beforeSelectionChange beforeSelectionChange=null;
     /**
- * Generated to type the string "delete".
- * @exclude
- */
-    @jsweet.lang.StringType
-    public interface delete {
-    }
-    /**
- * Generated to type the string "delete".
- * @exclude
- */
-    @jsweet.lang.StringType
-    public static def.codemirror.StringTypes.delete delete=null;
-    /**
  * Generated to type the string "beforeCursorEnter".
  * @exclude
  */

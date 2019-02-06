@@ -63,8 +63,8 @@ public final class Globals {
     native public static void off(Doc doc, def.codemirror.StringTypes.beforeSelectionChange eventName, java.util.function.BiConsumer<def.codemirror.codemirror.Editor,Selection> handler);
     /** Will be fired when the line object is deleted. A line object is associated with the start of the line.
     Mostly useful when you need to find out when your gutter markers on a given line are removed. */
-    native public static void on(LineHandle line, def.codemirror.StringTypes.delete eventName, java.lang.Runnable handler);
-    native public static void off(LineHandle line, def.codemirror.StringTypes.delete eventName, java.lang.Runnable handler);
+    native public static void on(LineHandle line, String eventName, java.lang.Runnable handler);
+    native public static void off(LineHandle line, String eventName, java.lang.Runnable handler);
     /** Fires when the line's text content is changed in any way (but the line is not deleted outright).
     The change object is similar to the one passed to change event on the editor object. */
     native public static void on(LineHandle line, def.codemirror.StringTypes.change eventName, java.util.function.BiConsumer<LineHandle,EditorChange> handler);

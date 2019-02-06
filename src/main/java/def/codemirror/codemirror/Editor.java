@@ -148,11 +148,7 @@ public abstract class Editor extends def.js.Object {
         If no line number is given, the state at the end of the document is returned.
         This can be useful for storing parsing errors in the state, or getting other kinds of contextual information for a line. */
     native public Object getStateAfter(double line);
-    /** CodeMirror internally buffers changes and only updates its DOM structure after it has finished performing some operation.
-        If you need to perform a lot of operations on a CodeMirror instance, you can call this method with a function argument.
-        It will call the function, buffering up all changes, and only doing the expensive update after the function returns.
-        This can be a lot faster. The return value from this method will be the return value of your function. */
-    native public <T> T operation(java.util.function.Supplier<T> fn);
+    
     /** In normal circumstances, use the above operation method. But if you want to buffer operations happening asynchronously, or that can't all be wrapped in a callback
         function, you can call startOperation to tell CodeMirror to start buffering changes, and endOperation to actually render all the updates. Be careful: if you use this
         API and forget to call endOperation, the editor will just never update. */

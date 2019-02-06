@@ -1,4 +1,4 @@
-/* Generated from Java with JSweet 2.0.0-SNAPSHOT - http://www.jsweet.org */
+/* Generated from Java with JSweet 2.2.0-SNAPSHOT - http://www.jsweet.org */
 declare namespace CodeMirror {
     /**
      * An annotation contains a description of a lint error, detailing the location of the error within the code, the severity of the error,
@@ -547,8 +547,6 @@ declare namespace CodeMirror {
 
         public constructor(text : string, mode : any);
 
-        public constructor(text : string);
-
         public static applyStatic(text : string, mode : any, firstLineNumber : number) : Doc;
 
         public static applyStatic(text : string, mode : any) : Doc;
@@ -611,8 +609,6 @@ declare namespace CodeMirror {
          * @param {Array} ranges
          */
         public setSelections(ranges : any[]);
-
-        constructor();
     }
 }
 declare namespace CodeMirror {
@@ -985,16 +981,6 @@ declare namespace CodeMirror {
          * @return {CodeMirror.Editor.Object}
          */
         getStateAfter(line : number) : any;
-
-        /**
-         * CodeMirror internally buffers changes and only updates its DOM structure after it has finished performing some operation.
-         * If you need to perform a lot of operations on a CodeMirror instance, you can call this method with a function argument.
-         * It will call the function, buffering up all changes, and only doing the expensive update after the function returns.
-         * This can be a lot faster. The return value from this method will be the return value of your function.
-         * @param {*} fn
-         * @return {*}
-         */
-        operation<T>(fn : () => T) : T;
 
         /**
          * In normal circumstances, use the above operation method. But if you want to buffer operations happening asynchronously, or that can't all be wrapped in a callback
@@ -2491,11 +2477,7 @@ declare namespace CodeMirror {
 
         apply(line : number, ch : number) : CodeMirror.Position;
 
-        constructor(line : number);
-
         apply(line : number) : CodeMirror.Position;
-
-        constructor();
     }
 }
 declare namespace CodeMirror {
